@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<layout>
+<!--
+/**
+ * Copyright (c) 2014-2026 Plugin Company
+ *
+ * This file is part of CMS Revisions, released under the MIT License.
+ * See the LICENSE file in the project root.
+ */
+-->
+    <!-- CMS PAGE REVISIONS -->
+    <adminhtml_cms_page_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>plugincompany/cmsrevisions.js</name>
+            </action>
+        </reference>
+    </adminhtml_cms_page_index>
+    <adminhtml_cms_page_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>plugincompany/cmsrevisions.js</name>
+            </action>
+        </reference>
+    </adminhtml_cms_page_edit>
+
+    <adminhtml_revisions_viewpagerevisions>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="plugincompany_cmsrevisions/adminhtml_pagerevisions"/>
+        </block>
+    </adminhtml_revisions_viewpagerevisions>
+
+    <adminhtml_revisions_viewblockrevisions>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="plugincompany_cmsrevisions/adminhtml_blockrevisions"/>
+        </block>
+    </adminhtml_revisions_viewblockrevisions>
+
+    <!-- CMS BLOCK REVISIONS -->
+    <adminhtml_cms_block_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>plugincompany/cmsrevisions.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+                <block type="core/template" template="plugincompany/cmsrevisions/block/grid_wrap_top.phtml" />
+                    <block name="blockrevisions" as="blockrevisions" type="plugincompany_cmsrevisions/adminhtml_blockrevisions"/>
+                <block type="core/template" template="plugincompany/cmsrevisions/block/grid_wrap_bottom.phtml" />
+        </reference>
+    </adminhtml_cms_block_edit>
+
+</layout>

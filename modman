@@ -1,0 +1,5 @@
+app/code/local/Plugincompany/Cmsrevisions app/code/local/Plugincompany/Cmsrevisions
+app/design/adminhtml/default/default/layout/plugincompany_cmsrevisions.xml app/design/adminhtml/default/default/layout/plugincompany_cmsrevisions.xml
+app/design/adminhtml/default/default/template/plugincompany/cmsrevisions app/design/adminhtml/default/default/template/plugincompany/cmsrevisions
+app/etc/modules/Plugincompany_Cmsrevisions.xml app/etc/modules/Plugincompany_Cmsrevisions.xml
+js/plugincompany/cmsrevisions.js js/plugincompany/cmsrevisions.js
